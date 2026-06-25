@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanika Bulathsinhala | Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio for Dhanika Bulathsinhala." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">dhanika<span>.sec</span></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#labs">Labs</a>
+      <a href="#projects">Projects</a>
+      <a href="#detections">Detection</a>
+      <a href="#writeups">Writeups</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="https://github.com/dhanikabulath" target="_blank">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Open to SOC, Detection & Security Engineering roles</p>
+        <h1>Dhanika Bulathsinhala</h1>
+        <h2>Cybersecurity Engineer</h2>
+        <p class="summary">Identity Security • Detection Engineering • Cloud Security • Security Operations</p>
+        <p>
+          Building enterprise security labs, Active Directory environments, Microsoft 365 security,
+          detection engineering projects, and security automation while pursuing an MSc in Cybersecurity Engineering.
+        </p>
+        <div class="tags">
+          <span>Enterprise Home Lab</span><span>Active Directory</span><span>Microsoft 365 Security</span>
+          <span>VMware Infrastructure</span><span>Detection Engineering</span><span>Python Automation</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#labs">View Security Labs</a>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="resume.pdf">Resume</a>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-top"><span></span><span></span><span></span></div>
+        <p>dhanika@lab : ~</p>
+        <pre><code>$ ./build-security-lab.sh
+
+// Enterprise Security Lab
+[+] Active Directory
+[+] Sysmon Telemetry
+[+] Wazuh SIEM
+[+] Sigma Detections
+[+] MITRE ATT&CK Mapping</code></pre>
+      </div>
+    </section>
+
+    <section id="labs" class="section">
+      <p class="eyebrow">// Enterprise Security Lab</p>
+      <h2>Built, not claimed</h2>
+      <p class="section-lead">
+        A self-hosted enterprise security environment used to engineer detections, validate attacks,
+        and harden identity, cloud, and network controls end-to-end.
+      </p>
+
+      <div class="pipeline">
+        <span>Internet</span><span>pfSense</span><span>Windows Server 2022</span><span>Active Directory</span>
+        <span>Windows 11 Client</span><span>Ubuntu Server</span><span>Sysmon</span><span>Wazuh SIEM</span>
+        <span>Detection Rules</span><span>MITRE ATT&CK</span><span>Alerts</span>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Identity Infrastructure</h3>
+          <p><b>Objective:</b> Build a hardened Active Directory forest with tiered admin, GPO baselines and MFA-protected identities.</p>
+          <p><b>Architecture:</b> Windows Server 2022 DC → AD DS / DNS → Windows 11 clients → LAPS + tiered admin model.</p>
+          <div class="tags"><span>Windows Server</span><span>Active Directory</span><span>Group Policy</span><span>LAPS</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Detection & Monitoring</h3>
+          <p><b>Objective:</b> Stream Windows + Linux telemetry into Wazuh, write Sigma detections and map alerts to ATT&CK.</p>
+          <p><b>Architecture:</b> Sysmon → Wazuh agent → Wazuh manager → Custom decoders → Sigma dashboards.</p>
+          <div class="tags"><span>Wazuh</span><span>Sysmon</span><span>Sigma</span><span>MITRE ATT&CK</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Cloud Security</h3>
+          <p><b>Objective:</b> Secure Microsoft 365 and Azure with Conditional Access, MFA and audit log pipelines.</p>
+          <p><b>Architecture:</b> Entra ID → Conditional Access → Defender → Audit logs forwarded to Wazuh.</p>
+          <div class="tags"><span>Microsoft 365</span><span>Entra ID</span><span>Azure</span><span>Defender</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Network Security</h3>
+          <p><b>Objective:</b> Segment the lab with pfSense, enforce VLAN boundaries and capture east-west traffic.</p>
+          <p><b>Architecture:</b> pfSense → VLANs → Suricata IDS → Wireshark capture point.</p>
+          <div class="tags"><span>pfSense</span><span>VLAN</span><span>Suricata</span><span>Wireshark</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats section compact">
+      <div><strong>6</strong><span>Enterprise Labs</span></div>
+      <div><strong>6</strong><span>Projects</span></div>
+      <div><strong>3</strong><span>Detection Rules</span></div>
+      <div><strong>200+</strong><span>Hours in Lab</span></div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="eyebrow">// Case Studies</p>
+      <h2>Projects engineered, not described</h2>
+      <div class="grid">
+        <article class="card project">
+          <small>Identity · T1078 / T1558.003</small>
+          <h3>Enterprise Active Directory Lab</h3>
+          <p>Single forest, OU-driven GPO scoping, LAPS for local admin rotation and BloodHound validation.</p>
+          <a href="https://github.com/dhanikabulath" target="_blank">Code →</a>
+        </article>
+        <article class="card project">
+          <small>Detection · T1059.001 / T1003.001</small>
+          <h3>Wazuh SIEM with Sigma Detections</h3>
+          <p>Custom decoders for Sysmon and Sigma rules for Kerberoasting, PtH and encoded PowerShell.</p>
+          <a href="https://github.com/dhanikabulath" target="_blank">Code →</a>
+        </article>
+        <article class="card project">
+          <small>Cloud · T1110 / T1078.004</small>
+          <h3>Microsoft 365 / Entra ID Hardening</h3>
+          <p>Conditional Access baselines, legacy auth blocking, risk-based sign-ins and audit log export.</p>
+          <a href="https://github.com/dhanikabulath" target="_blank">Code →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="detections" class="section">
+      <p class="eyebrow">// Detection Engineering Portfolio</p>
+      <h2>Detections mapped to MITRE ATT&CK</h2>
+      <div class="grid">
+        <article class="card">
+          <small>T1059.001</small>
+          <h3>PowerShell Encoded Command Execution</h3>
+          <p><b>Log source:</b> PowerShell Operational 4104</p>
+          <p><b>Logic:</b> ScriptBlockText matches base64 patterns and parent process not in allowlist.</p>
+        </article>
+        <article class="card">
+          <small>T1558.003</small>
+          <h3>Kerberoasting</h3>
+          <p><b>Log source:</b> Windows Security 4769</p>
+          <p><b>Logic:</b> RC4 ticket encryption + non-machine account requesting SPN.</p>
+        </article>
+        <article class="card">
+          <small>T1550.002</small>
+          <h3>Pass-the-Hash Lateral Movement</h3>
+          <p><b>Log source:</b> Security 4624 Type 9 + 4672</p>
+          <p><b>Logic:</b> Explicit credentials from non-interactive process tree.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="writeups" class="section">
+      <p class="eyebrow">// Writeups</p>
+      <h2>Research notes and lab writeups</h2>
+      <div class="grid">
+        <article class="card"><h3>Building an AD Home Lab</h3><p>Designing OU structure, GPO baselines and secure admin tiers.</p></article>
+        <article class="card"><h3>Kerberoasting Detection</h3><p>Understanding service ticket activity and reducing false positives.</p></article>
+        <article class="card"><h3>Microsoft 365 Security Baseline</h3><p>Rolling out Conditional Access without locking yourself out.</p></article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="eyebrow">// Experience</p>
+      <h2>Current focus</h2>
+      <div class="card">
+        <p>MSc Cybersecurity Engineering student focused on SOC operations, identity security,
+        detection engineering, cloud security and hands-on enterprise lab building.</p>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <p class="eyebrow">// Certifications</p>
+      <h2>Certifications & learning path</h2>
+      <div class="tags large">
+        <span>Security+</span><span>Microsoft Security</span><span>Azure Security</span>
+        <span>TryHackMe</span><span>Hack The Box</span><span>Blue Team Labs</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">// Contact</p>
+      <h2>Let's connect</h2>
+      <p>Interested in SOC, Detection Engineering, Cloud Security and Security Engineering opportunities.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:dhanika@example.com">Email Me</a>
+        <a class="btn" href="https://github.com/dhanikabulath" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Dhanika Bulathsinhala. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
